@@ -1,5 +1,5 @@
 {
-    "name": "wulfheart/laravel-actions-ide-helper",
+    "name": "fmtod/ide-helper-laravel-actions",
     "description": "Generate a new IDE Helper file for Laravel Actions.",
     "keywords": [
         "Wulfheart",
