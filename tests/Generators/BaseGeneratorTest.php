@@ -1,9 +1,9 @@
 <?php
 
-use Wulfheart\LaravelActionsIdeHelper\Service\Generator\DocBlock\DocBlockGeneratorBase;
-use Wulfheart\LaravelActionsIdeHelper\Tests\stubs\EmptyAction;
-use Wulfheart\LaravelActionsIdeHelper\Tests\stubs\Jobs\WithDecoratorAction;
-use Wulfheart\LaravelActionsIdeHelper\Tests\stubs\Jobs\WithoutDecoratorAction;
+use FmTod\IdeHelperLaravelActions\Service\Generator\DocBlock\DocBlockGeneratorBase;
+use FmTod\IdeHelperLaravelActions\Tests\stubs\EmptyAction;
+use FmTod\IdeHelperLaravelActions\Tests\stubs\Jobs\WithDecoratorAction;
+use FmTod\IdeHelperLaravelActions\Tests\stubs\Jobs\WithoutDecoratorAction;
 
 it('cannot find a method that is not there', function() {
     $ai = $ai = getActionInfo(EmptyAction::class);

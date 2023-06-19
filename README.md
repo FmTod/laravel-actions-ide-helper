@@ -5,7 +5,7 @@ This packages generates IDE helpers for [Laravel Actions v2](https://github.com/
 ## Installation
 
 ```
-composer require --dev wulfheart/laravel-actions-ide-helper
+composer require --dev fmtod/ide-helper-laravel-actions
 ```
 
 ## Usage

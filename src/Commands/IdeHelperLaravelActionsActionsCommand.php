@@ -1,13 +1,13 @@
 <?php
 
-namespace Wulfheart\LaravelActionsIdeHelper\Commands;
+namespace FmTod\IdeHelperLaravelActions\Commands;
 
 use Illuminate\Console\Command;
 use Illuminate\Support\Str;
-use Wulfheart\LaravelActionsIdeHelper\Service\ActionInfoFactory;
-use Wulfheart\LaravelActionsIdeHelper\Service\BuildIdeHelper;
+use FmTod\IdeHelperLaravelActions\Service\ActionInfoFactory;
+use FmTod\IdeHelperLaravelActions\Service\BuildIdeHelper;
 
-class LaravelActionsIdeHelperCommand extends Command
+class IdeHelperLaravelActionsActionsCommand extends Command
 {
     public $signature = 'ide-helper:actions';
 
@@ -16,7 +16,7 @@ class LaravelActionsIdeHelperCommand extends Command
     public function handle(): void
     {
         $outfile = base_path('_ide_helper_actions.php');
-        $actionInfos = collect(config('actions-ide-helper.paths', [app_path('Actions')]))
+        $actionInfos = collect(config('ide-helper-laravel-actions.paths', [app_path('Actions')]))
             ->map(fn ($path) => ActionInfoFactory::create($path))
             ->flatten()
             ->toArray();

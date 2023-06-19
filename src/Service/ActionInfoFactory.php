@@ -1,6 +1,6 @@
 <?php
 
-namespace Wulfheart\LaravelActionsIdeHelper\Service;
+namespace FmTod\IdeHelperLaravelActions\Service;
 
 use Illuminate\Support\Str;
 use Lorisleiva\Actions\Concerns\AsCommand;
@@ -19,7 +19,7 @@ class ActionInfoFactory
 {
     /**
      * @param  string  $path
-     * @return array<\Wulfheart\LaravelActionsIdeHelper\Service\ActionInfo>
+     * @return array<\FmTod\IdeHelperLaravelActions\Service\ActionInfo>
      * @throws \phpDocumentor\Reflection\Exception
      */
     public static function create(string $path): array

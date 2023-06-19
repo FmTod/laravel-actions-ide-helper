@@ -1,6 +1,6 @@
 <?php
 
-namespace Wulfheart\LaravelActionsIdeHelper\Tests\stubs\Object;
+namespace FmTod\IdeHelperLaravelActions\Tests\stubs\Object;
 
 use Lorisleiva\Actions\Concerns\AsAction;
 

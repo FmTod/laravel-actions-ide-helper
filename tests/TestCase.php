@@ -1,17 +1,16 @@
 <?php
 
-namespace Wulfheart\LaravelActionsIdeHelper\Tests;
+namespace FmTod\IdeHelperLaravelActions\Tests;
 
 use Orchestra\Testbench\TestCase as Orchestra;
-use Wulfheart\LaravelActionsIdeHelper\LaravelActionsIdeHelperServiceProvider;
+use FmTod\IdeHelperLaravelActions\IdeHelperLaravelActionsServiceProvider;
 
 class TestCase extends Orchestra
 {
-    protected function getPackageProviders($app)
+    protected function getPackageProviders($app): array
     {
         return [
-            LaravelActionsIdeHelperServiceProvider::class,
+            IdeHelperLaravelActionsServiceProvider::class,
         ];
     }
-
 }

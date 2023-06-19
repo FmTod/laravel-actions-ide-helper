@@ -1,2 +1,2 @@
 providers:
-  - Wulfheart\LaravelActionsIdeHelper\LaravelActionsIdeHelperServiceProvider
+  - FmTod\IdeHelperLaravelActions\LaravelActionsIdeHelperServiceProvider

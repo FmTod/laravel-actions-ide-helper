@@ -6,7 +6,7 @@
         "laravel",
         "laravel-actions-ide-helper"
     ],
-    "homepage": "https://github.com/wulfheart/laravel-actions-ide-helper",
+    "homepage": "https://github.com/fmtod/laravel-actions-ide-helper",
     "license": "MIT",
     "authors": [
         {
@@ -38,13 +38,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Wulfheart\\LaravelActionsIdeHelper\\": "src",
-            "Wulfheart\\LaravelActionsIdeHelper\\Database\\Factories\\": "database/factories"
+            "FmTod\\IdeHelperLaravelActions\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Wulfheart\\LaravelActionsIdeHelper\\Tests\\": "tests"
+            "FmTod\\IdeHelperLaravelActions\\Tests\\": "tests"
         }
     },
     "scripts": {},
@@ -58,11 +57,8 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Wulfheart\\LaravelActionsIdeHelper\\LaravelActionsIdeHelperServiceProvider"
-            ],
-            "aliases": {
-                "LaravelActionsIdeHelper": "Wulfheart\\LaravelActionsIdeHelper\\LaravelActionsIdeHelperFacade"
-            }
+                "FmTod\\IdeHelperLaravelActions\\IdeHelperLaravelActionsServiceProvider"
+            ]
         }
     },
     "minimum-stability": "dev",

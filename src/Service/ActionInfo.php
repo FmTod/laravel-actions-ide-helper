@@ -1,6 +1,6 @@
 <?php
 
-namespace Wulfheart\LaravelActionsIdeHelper\Service;
+namespace FmTod\IdeHelperLaravelActions\Service;
 
 use Illuminate\Support\Str;
 use Lorisleiva\Actions\Concerns\AsCommand;
@@ -10,11 +10,11 @@ use Lorisleiva\Actions\Concerns\AsJob;
 use Lorisleiva\Actions\Concerns\AsListener;
 use Lorisleiva\Actions\Concerns\AsObject;
 use phpDocumentor\Reflection\Php\Class_;
-use Wulfheart\LaravelActionsIdeHelper\Service\Generator\DocBlock\AsCommandGenerator;
-use Wulfheart\LaravelActionsIdeHelper\Service\Generator\DocBlock\AsControllerGenerator;
-use Wulfheart\LaravelActionsIdeHelper\Service\Generator\DocBlock\AsJobGenerator;
-use Wulfheart\LaravelActionsIdeHelper\Service\Generator\DocBlock\AsListenerGenerator;
-use Wulfheart\LaravelActionsIdeHelper\Service\Generator\DocBlock\AsObjectGenerator;
+use FmTod\IdeHelperLaravelActions\Service\Generator\DocBlock\AsCommandGenerator;
+use FmTod\IdeHelperLaravelActions\Service\Generator\DocBlock\AsControllerGenerator;
+use FmTod\IdeHelperLaravelActions\Service\Generator\DocBlock\AsJobGenerator;
+use FmTod\IdeHelperLaravelActions\Service\Generator\DocBlock\AsListenerGenerator;
+use FmTod\IdeHelperLaravelActions\Service\Generator\DocBlock\AsObjectGenerator;
 
 final class ActionInfo
 {
@@ -94,7 +94,7 @@ final class ActionInfo
 
 
     /**
-     * @return \Wulfheart\LaravelActionsIdeHelper\Service\Generator\DocBlock\DocBlockGeneratorInterface[]
+     * @return \FmTod\IdeHelperLaravelActions\Service\Generator\DocBlock\DocBlockGeneratorInterface[]
      */
     public function getGenerators(): array
     {

@@ -1,12 +1,12 @@
 <?php
 
-namespace Wulfheart\LaravelActionsIdeHelper;
+namespace FmTod\IdeHelperLaravelActions;
 
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use Wulfheart\LaravelActionsIdeHelper\Commands\LaravelActionsIdeHelperCommand;
+use FmTod\IdeHelperLaravelActions\Commands\IdeHelperLaravelActionsActionsCommand;
 
-class LaravelActionsIdeHelperServiceProvider extends PackageServiceProvider
+class IdeHelperLaravelActionsServiceProvider extends PackageServiceProvider
 {
     public function configurePackage(Package $package): void
     {
@@ -18,6 +18,6 @@ class LaravelActionsIdeHelperServiceProvider extends PackageServiceProvider
         $package
             ->name('laravel-actions-ide-helper')
             ->hasConfigFile('ide-helper-actions')
-            ->hasCommand(LaravelActionsIdeHelperCommand::class);
+            ->hasCommand(IdeHelperLaravelActionsActionsCommand::class);
     }
 }

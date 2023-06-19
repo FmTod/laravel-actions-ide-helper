@@ -3,12 +3,12 @@
 use Lorisleiva\Actions\Concerns\AsJob;
 use Lorisleiva\Actions\Concerns\AsObject;
 use phpDocumentor\Reflection\Php\Class_;
-use Wulfheart\LaravelActionsIdeHelper\Service\ActionInfo;
-use Wulfheart\LaravelActionsIdeHelper\Service\ActionInfoFactory;
-use Wulfheart\LaravelActionsIdeHelper\Tests\stubs\BaseAction;
-use Wulfheart\LaravelActionsIdeHelper\Tests\stubs\NewAction;
-use Wulfheart\LaravelActionsIdeHelper\Tests\stubs\NotAnAction;
-use Wulfheart\LaravelActionsIdeHelper\Tests\stubs\TestAction;
+use FmTod\IdeHelperLaravelActions\Service\ActionInfo;
+use FmTod\IdeHelperLaravelActions\Service\ActionInfoFactory;
+use FmTod\IdeHelperLaravelActions\Tests\stubs\BaseAction;
+use FmTod\IdeHelperLaravelActions\Tests\stubs\NewAction;
+use FmTod\IdeHelperLaravelActions\Tests\stubs\NotAnAction;
+use FmTod\IdeHelperLaravelActions\Tests\stubs\TestAction;
 
 it('creates a correct trait lookup', function() {
     $result = invade(new ActionInfoFactory())->loadFromPath(__DIR__ . '/stubs');
