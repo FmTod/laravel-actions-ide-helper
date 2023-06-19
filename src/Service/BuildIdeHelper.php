@@ -11,6 +11,7 @@ use phpDocumentor\Reflection\TypeResolver;
 use PhpParser\Builder\Trait_;
 use PhpParser\BuilderFactory;
 use PhpParser\Comment\Doc;
+use PhpParser\Node;
 use PhpParser\PrettyPrinter\Standard;
 
 class BuildIdeHelper
@@ -43,15 +44,15 @@ class BuildIdeHelper
             $nodes[] = $ns->getNode();
         }
         $nodes[] = $this->getTraitIdeHelpers($factory);
-        $printer = new Standard();
-        $data = $printer->prettyPrintFile($nodes);
-        return $data;
+
+        return (new Standard())->prettyPrintFile($nodes);
     }
 
     protected function generateDocBlocks(ActionInfo $info): string
     {
         $tags = [];
         foreach ($info->getGenerators() as $generator) {
+            /** @noinspection SlowArrayOperationsInLoopInspection */
             $tags = array_merge($tags, $generator::create()->generate($info));
         }
 
@@ -62,9 +63,8 @@ class BuildIdeHelper
     protected function serializeDocBlocks(Tag ...$tags): string
     {
         $db = new DocBlock('', null, $tags);
-        $serializer = new Serializer();
 
-        return $serializer->getDocComment($db);
+        return (new Serializer())->getDocComment($db);
     }
 
     protected function resolveType(string $type): Type
@@ -77,7 +77,7 @@ class BuildIdeHelper
         return (new TypeResolver())->resolve(implode('|', $types));
     }
 
-    protected function getTraitIdeHelpers(BuilderFactory $factory): \PhpParser\Node
+    protected function getTraitIdeHelpers(BuilderFactory $factory): Node
     {
         return $factory->namespace("Lorisleiva\Actions\Concerns")
             ->addStmt(

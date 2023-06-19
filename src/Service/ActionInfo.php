@@ -3,7 +3,6 @@
 namespace Wulfheart\LaravelActionsIdeHelper\Service;
 
 use Illuminate\Support\Str;
-use JetBrains\PhpStorm\Pure;
 use Lorisleiva\Actions\Concerns\AsCommand;
 use Lorisleiva\Actions\Concerns\AsController;
 use Lorisleiva\Actions\Concerns\AsFake;
