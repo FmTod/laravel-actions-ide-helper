@@ -20,7 +20,6 @@ class ActionInfoFactory
     /**
      * @param  string  $path
      * @return array<\Wulfheart\LaravelActionsIdeHelper\Service\ActionInfo>
-     * @throws \ReflectionException
      * @throws \phpDocumentor\Reflection\Exception
      */
     public static function create(string $path): array
@@ -31,7 +30,6 @@ class ActionInfoFactory
         $ais = [];
         foreach ($classes as $class => $traits){
             $tc = collect($traits);
-            $reflection = new \ReflectionClass($class);
             $ais[] = ActionInfo::create()
                 ->setName($class)
                 ->setAsObject($tc->contains(AsObject::class))

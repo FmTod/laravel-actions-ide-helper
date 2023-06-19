@@ -16,7 +16,8 @@ class LaravelActionsIdeHelperServiceProvider extends PackageServiceProvider
          * More info: https://github.com/spatie/laravel-package-tools
          */
         $package
-            ->name('laravel-ide-helper-actions')
+            ->name('laravel-actions-ide-helper')
+            ->hasConfigFile('ide-helper-actions')
             ->hasCommand(LaravelActionsIdeHelperCommand::class);
     }
 }

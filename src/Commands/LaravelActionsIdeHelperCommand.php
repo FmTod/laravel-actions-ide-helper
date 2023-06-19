@@ -15,11 +15,11 @@ class LaravelActionsIdeHelperCommand extends Command
 
     public function handle(): void
     {
-        $actionsPath = app_path('Actions');
-
         $outfile = base_path('_ide_helper_actions.php');
-
-        $actionInfos = ActionInfoFactory::create($actionsPath);
+        $actionInfos = collect(config('actions-ide-helper.paths', [app_path('Actions')]))
+            ->map(fn ($path) => ActionInfoFactory::create($path))
+            ->flatten()
+            ->toArray();
 
         $result = BuildIdeHelper::create()->build($actionInfos);
 
